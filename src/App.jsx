@@ -5,6 +5,8 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import NotFound from "./components/NotFound";
 import springRolls from "./assets/images/spring-rolls.jpg";
 import mozzarellaSticks from "./assets/images/Mozzarella_Sticks.jpg";
 import grilledSalmon from "./assets/images/featured-grilled-salmon-recipe.jpg";
@@ -113,7 +115,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

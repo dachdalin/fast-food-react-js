@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 const Header = () => {
+  const { cart } = useContext(CartContext);
+  const count = cart.reduce((acc, item) => acc + item.quantity, 0);
   return (
     <header>
         <div className="container">
@@ -18,7 +21,7 @@ const Header = () => {
             <div className="cart-icon">
                 <Link to="/cart">
                     <i className="fas fa-shopping-cart"></i>
-                    <span id="cart-count">0</span>
+                    <span id="cart-count">{count}</span>
                 </Link>
             </div>
             <div className="menu-toggle" id="menu-toggle">
