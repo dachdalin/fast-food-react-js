@@ -1,5 +1,6 @@
 import React, { useContext} from 'react'
 import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const ProductCard = (props) => {
    const { addToCart } = useContext(CartContext);
@@ -15,9 +16,11 @@ const handleAddToCart = () => {
   return (
          <div className='cont'>
             <div className="product-card">
+                <Link to={`/product/${props.id}`}>
                    <div className="product-card__image">
                         <img src={props.image} alt={props.name} />
                    </div>
+                </Link>
                    <div className="product-card__info">
                      <h2 className='product-card__title'>{props.name}</h2>
                      <p className="product-card__description">{props.description}</p>

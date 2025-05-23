@@ -6,6 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import ProductDetail from "./components/ProductDetail";
 import NotFound from "./components/NotFound";
 import springRolls from "./assets/images/spring-rolls.jpg";
 import mozzarellaSticks from "./assets/images/Mozzarella_Sticks.jpg";
@@ -115,6 +116,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id"  element={<ProductDetail category={category} />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
